@@ -1,0 +1,9 @@
+.output-color {
+  background: linear-gradient(var(--angle), var(--color-1), var(--color-2));
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+body {
+  color: white;
+}

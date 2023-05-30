@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EE Progress Reporter - Report</title>
+    <link href="../static/background/background.css" rel="stylesheet">
+    <link href="../static/report/report.css" rel="stylesheet">
+</head>
+<body class = "output-color">
+    <h1>Here is the report:</h1>
+    <div class="rectangle">
+        <div class = "text-reg"> 
+            <p>Here is the features you requested and their importance: </p>
+            <table>
+                <tr>
+                    <th>Features</th>
+                    <th>Count Towards Report?</th>
+                    <th>Value/Presence</th>
+                    <th>Importance</th>
+                    <th>Progress</th>
+                </tr>
+                <tr>
+                    <td>Word Count</td>
+                    <td>{{want_wordcount}}</td>
+                    <td>{{vp_wc}}</td>
+                    <td>{{word_count_importance}}</td>
+                </tr>
+                <tr>
+                    <td>Table Of Contents</td>
+                    <td>{{want_toc}}</td>
+                    <td>{{vp_toc}}</td>
+                    <td>{{toc_importance}}</td>
+                </tr>
+                <tr>
+                    <td>Title Page</td>
+                    <td>{{want_titlepage}}</td>
+                    <td>{{vp_tp}}</td>
+                    <td>{{titlepage_importance}}</td>
+                </tr>
+                <tr>
+                    <td>Bibliography</td>
+                    <td>{{want_bibliography}}</td>
+                    <td>{{vp_b}}</td>
+                    <td>{{bibliography_importance}}</td>
+                </tr>
+                <tr>
+                    <td>Final</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>{{all}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div>
+        <form action="home">
+            <input type="submit" value="Home" style="float: left; margin-left: 10vmin; margin-top: 5vmin; margin-bottom: 5vmin;">
+        </form>
+        <form>
+            <input type="submit" id="Download" value="Download" style="float: left; margin-left: 30vmin; margin-top: 5vmin;">
+        </form>
+        <form action="uploadFiles">
+            <input type="submit" value="Change Settings" style="float: left; margin-left: 40vmin; margin-top: 5vmin;">
+        </form>
+        <form action="help">
+            <input type="submit" value="? Help" style="float: left; margin-left: 30vmin; margin-top: 5vmin;">
+        </form>
+    </div>
+    <script src="../static/background/background.js"></script>
+    <script src="../static/report/report.js"></script>
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+</body>
+</html>

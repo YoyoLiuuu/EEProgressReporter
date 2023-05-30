@@ -1,0 +1,53 @@
+body {
+    font-family: Georgia;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+div {
+    border-radius: 5px;
+    background: linear-gradient(var(--angle), var(--color-1), var(--color-2));;
+    padding: 15px;
+}
+.container {
+    display: flex;
+    font-size: 30px;
+}
+.container > div {
+    flex: 1; /*grow*/
+}
+.rectangle {
+    height: 50%;
+    width: 30%;
+}
+.round-center {
+    border-radius: 50%; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.form-text {
+    font-size: 20px;
+}
+.text-center {
+    text-align: center;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EE Progress Reporter</title>
+    <link rel="stylesheet" href="../static/home/main.css">
+    <link rel="stylesheet" href="../static/background/background.css">
+</head>
+<body class="output-color">
+    <h1 class="text-center">Automatic EE Progress Checker</h1>
+    <p id="mdg" class="text-center">Welcome! Please Select a Mode to Begin: </p>
+    <div class = "container">
+        <div class="rectangle">Please confirm: 
+            <p> </p>
+            <form id="clientInfo" class="form-text" onsubmit ="return confirm('Still developing! Check back later for more!')">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            
+                <label for="email">Email Address</label>
+                <input type="text" id="email" name="emailladdress" placeholder="Your email address..">
+
+                <input type="submit" value="Submit">
+              </form>
+        </div>
+        <div class="rectangle">
+            Upload new files to check: 
+            <p>   </p>
+            <img class = "round-center" src="https://mocas-online.com/wp-content/uploads/2019/10/pdf.png" 
+                alt="PDF File Image"  width="212" height="212">
+            <p>   </p>
+            <form action="uploadFiles">
+                <input type="submit" value="Yes"/>
+            </form>
+        </div>
+        <div class="rectangle">
+            Load past reports: 
+            <p>   </p>
+            <img class = "round-center" src="https://www.king.ca/sites/default/files/images/development-growth/building-septic/istockphoto-493653152-612x612.jpg" 
+                alt="Report Image"  width="212" height="212">
+            <p>   </p>
+            <form action="/pastReports" onsubmit ="return confirm('Still developing! Check back later for more!')">
+                <input type="submit" value="Yes"/>
+            </form>
+        </div>
+    </div>
+    <div class = "help">
+        <form action="help">
+            <input type="submit" value="? Help"/>
+        </form>
+    </div>
+    <script src="../static/background/background.js"></script>
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+</body>
+</html>

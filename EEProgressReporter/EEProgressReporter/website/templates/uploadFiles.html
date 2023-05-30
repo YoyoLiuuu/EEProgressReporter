@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EE Progress Reporter</title>
+    <link rel="stylesheet" href="../static/background/background.css">
+    <link rel="stylesheet" href="../static/uploadFiles/uploadFiles.css">
+</head>
+<body class="output-color">
+    <div class="center">
+        <h1>Please upload your file in <strong>PDF</strong> format only: </h1>    
+        <form action = "/upload" name="the_form" method="post"> 
+            <label id="chooseFile" for="file-upload"> 
+                <input id="file-upload" name = "file" type="text"/>
+            </label>
+            <p>Please enter FULL file path.</p>
+            <p class="make-clear">Note: the presence of <strong>Table of Content, Title Page, and Bibliography</strong> will <strong>positively</strong> impact the progress, 
+                while the presence of <strong>Bullet Points</strong> will <strong>negatively</strong> impact the progress.</p>
+            <h1>Please select calculation settings:</h1>
+            <label for="tableOfContent">Do you want the presence of the <strong>Table of Content</strong> affect the EE progress?</label>
+            <select id="tableOfContent" name="tableOfContent">
+            <option value="Yes">YES: affect the progress</option>
+            <option value="No">NO: no effect on progress</option>
+            </select>
+            <label><input style='width:5%' type="number" id="tocroi" name="tocRateOfImportance"> points of importance.*</label>
+            <p>  </p>
+            <label for="wordCount">Do you want the <strong>Word Count</strong> affect the EE progress?</label>
+            <select id="wordCount" name="wordCount">
+            <option value="Yes">YES: affect the progress</option>
+            <option value="No">NO: no effect on progress</option>
+            </select>
+            <label><input style='width:5%' type="number" id="wcroi" name="wcRateOfImportance"> points of importance.*</label>
+            <p>  </p>
+            <label for="titlePage">Do you want the presence of the <strong>Title Page</strong> affect the EE progress?</label>
+            <select id="titlePage" name="titlePage">
+            <option value="Yes">YES: affect the progress</option>
+            <option value="No">NO: no effect on progress</option>
+            </select>
+            <label><input style='width:5%' type="number" id="tprof" name="tpRateOfImportance"> points of importance.*</label>
+            <p>  </p>
+            <label for="bibliography">Do you want the presence of the <strong>Bibliography</strong> affect the EE progress?</label>
+            <select id="bibliography" name="bibliography">
+            <option value="Yes">YES: affect the progress</option>
+            <option value="No">NO: no effect on progress</option>
+            </select>
+            <label><input style='width:5%' type="number" id="broi" name="bRateOfImportance"> points of importance.*</label>
+            <p>  </p>
+            <input type="submit" value="Save and Continue"/>
+            <script src="../static/uploadFiles/uploadFiles.js"></script>
+        </form>
+    </div>
+    <p>   </p>
+    <div class="center">*: rate of importance is a relative value. Please enter an <strong>integer</strong> value inputted will be used to calculate percentage importance relative to other elements' relative importance, and the report will be generated base on that. When an element is disabled ("NO" is selected), the value in this box will not be counted towards progress report generation.</div>
+    <div>
+        <div style="float: left; width: 20%; padding-left: 150px"> 
+            <form action="home">
+                <input type="submit" value="Back"/>
+            </form>
+        </div>
+        <div style="float: right; width: 20%; padding-right: 0px;" > 
+            <form action="help">
+                <input type="submit" value="? Help"/>
+            </form>
+        </div>
+    </div>
+    <script src="../static/background/background.js"></script>
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+</body>
+</html>
